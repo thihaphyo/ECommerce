@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/margin_medium"
+             android:layout_marginTop="@dimen/margin_medium"
+             android:layout_marginRight="@dimen/margin_medium"
+             android:layout_marginBottom="@dimen/margin_medium_2"
+             android:clickable="true"
+             android:foreground="@drawable/ripple_effect">
+
+    <com.padc.ecommerce.utils.RoundRectCornerImageView
+            android:id="@+id/ivCat"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/dummy_ityem"
+            android:scaleType="centerCrop"
+    />
+
+    <RelativeLayout
+            android:id="@+id/rl_text"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/bottom_round"
+            android:layout_gravity="bottom">
+
+        <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_margin="@dimen/margin_medium"/>
+
+        <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$2"
+                android:layout_below="@+id/tvItemName"
+                android:layout_alignLeft="@+id/tvItemName"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/white"/>
+
+        <ImageView
+                android:id="@+id/btnLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvPrice"
+                android:layout_alignBottom="@id/tvPrice"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_favorite_black_24dp"
+                android:layout_marginRight="@dimen/margin_medium"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
